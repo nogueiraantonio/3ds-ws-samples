@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0777D15E-CDC4-4CB5-90F1-2E2A07302A42}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ds.emedcpe.samples.docs</RootNamespace>
+    <AssemblyName>ds.emedcpe.samples.docs</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ds.authentication, Version=1.0.1.0, Culture=neutral, PublicKeyToken=5c15406849d75246, processorArchitecture=MSIL">
+      <HintPath>..\packages\ds.authentication.1.0.1\lib\net452\ds.authentication.dll</HintPath>
+    </Reference>
+    <Reference Include="ds.delmia.dsmfg, Version=1.0.2.0, Culture=neutral, PublicKeyToken=08250238e46f0f47, processorArchitecture=MSIL">
+      <HintPath>packages\ds.delmia.dsmfg.1.0.2\lib\net472\ds.delmia.dsmfg.dll</HintPath>
+    </Reference>
+    <Reference Include="ds.enovia, Version=1.0.5.0, Culture=neutral, PublicKeyToken=e202c4a29a6a20d8, processorArchitecture=MSIL">
+      <HintPath>packages\ds.enovia.1.0.5\lib\net452\ds.enovia.dll</HintPath>
+    </Reference>
+    <Reference Include="ds.enovia.common, Version=1.1.5.0, Culture=neutral, PublicKeyToken=0be2ec88375bad02, processorArchitecture=MSIL">
+      <HintPath>packages\ds.enovia.common.1.1.5\lib\net452\ds.enovia.common.dll</HintPath>
+    </Reference>
+    <Reference Include="ds.enovia.document, Version=1.0.3.0, Culture=neutral, PublicKeyToken=843c4fc0085d0d5f, processorArchitecture=MSIL">
+      <HintPath>packages\ds.enovia.document.1.0.3\lib\net472\ds.enovia.document.dll</HintPath>
+    </Reference>
+    <Reference Include="ds.enovia.dscfg, Version=1.0.6.0, Culture=neutral, PublicKeyToken=74a474a382d131f6, processorArchitecture=MSIL">
+      <HintPath>packages\ds.enovia.dscfg.1.0.6\lib\net472\ds.enovia.dscfg.dll</HintPath>
+    </Reference>
+    <Reference Include="ds.enovia.dseng, Version=1.1.8.0, Culture=neutral, PublicKeyToken=5fc10858dff612ce, processorArchitecture=MSIL">
+      <HintPath>packages\ds.enovia.dseng.1.1.8\lib\net472\ds.enovia.dseng.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.7.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.7\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="authentication\AuthenticationInfo.cs" />
+    <Compile Include="authentication\AuthenticationForm .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authentication\AuthenticationForm .Designer.cs">
+      <DependentUpon>AuthenticationForm .cs</DependentUpon>
+    </Compile>
+    <Compile Include="authentication\AuthenticationSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authentication\AuthenticationSelectionForm.Designer.cs">
+      <DependentUpon>AuthenticationSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="authentication\AgentAuthenticationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authentication\AgentAuthenticationForm.Designer.cs">
+      <DependentUpon>AgentAuthenticationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="authentication\BatchServiceAuthenticationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authentication\BatchServiceAuthenticationForm.Designer.cs">
+      <DependentUpon>BatchServiceAuthenticationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="authentication\CloudAgentAuthentication.cs" />
+    <Compile Include="authentication\SecurityContextSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authentication\SecurityContextSelection.Designer.cs">
+      <DependentUpon>SecurityContextSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentCreateForm.Designer.cs">
+      <DependentUpon>DocumentCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElementTypeEnum.cs" />
+    <Compile Include="model\DocumentRow.cs" />
+    <Compile Include="platform\CloudPlatformType.cs" />
+    <Compile Include="authentication\CloudUserAuthentication.cs" />
+    <Compile Include="interface\IAuthenticationType.cs" />
+    <Compile Include="interface\ICloudAuthenticationType.cs" />
+    <Compile Include="interface\IPremiseAuthenticationType.cs" />
+    <Compile Include="authentication\PremiseBatchServiceAuthentication.cs" />
+    <Compile Include="platform\PremisePlatformType.cs" />
+    <Compile Include="authentication\PremiseUserAuthentication.cs" />
+    <Compile Include="SearchEngItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchEngItemsForm.Designer.cs">
+      <DependentUpon>SearchEngItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceConnections.cs" />
+    <EmbeddedResource Include="authentication\AuthenticationForm .resx">
+      <DependentUpon>AuthenticationForm .cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authentication\AuthenticationSelectionForm.resx">
+      <DependentUpon>AuthenticationSelectionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authentication\AgentAuthenticationForm.resx">
+      <DependentUpon>AgentAuthenticationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authentication\BatchServiceAuthenticationForm.resx">
+      <DependentUpon>BatchServiceAuthenticationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authentication\SecurityContextSelection.resx">
+      <DependentUpon>SecurityContextSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentCreateForm.resx">
+      <DependentUpon>DocumentCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchEngItemsForm.resx">
+      <DependentUpon>SearchEngItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
